@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27w-e3-EEy"/>
+                                    <action selector="calculateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bu-Wa-ZpB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE YOUR BMI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNF-uH-tp0">
@@ -126,19 +126,22 @@
                     </view>
                     <connections>
                         <outlet property="hightLabel" destination="2LZ-Nb-3Bc" id="JpW-vx-Vqs"/>
+                        <outlet property="hightSliderLbl" destination="41d-iN-xr5" id="0PF-fY-vId"/>
                         <outlet property="weightLabel" destination="nH3-am-ThL" id="lCo-Xe-IZa"/>
+                        <outlet property="weightSliderLbl" destination="7V1-Pu-hul" id="y2b-Xs-D0f"/>
+                        <segue destination="dmx-Pf-959" kind="presentation" identifier="goToResult" id="dbK-bp-Bby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="91" y="-2"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="p9I-iB-1Cy">
             <objects>
-                <viewController id="dmx-Pf-959" customClass="SecondViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dmx-Pf-959" customClass="ResultViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="es2-Vp-hZM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="result-background" translatesAutoresizingMaskIntoConstraints="NO" id="uiD-nE-yXM">
@@ -146,7 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-DK-DPV">
-                                <rect key="frame" x="20" y="376" width="353" height="100"/>
+                                <rect key="frame" x="20" y="341.66666666666669" width="353" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="c3o-dD-Hnd"/>
                                 </constraints>
@@ -155,7 +158,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go easy on the snake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIO-Ux-PfF">
-                                <rect key="frame" x="20" y="484" width="353" height="50"/>
+                                <rect key="frame" x="20" y="449.66666666666669" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="475-c5-4iI"/>
                                 </constraints>
@@ -177,7 +180,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whe-e7-AZQ">
-                                <rect key="frame" x="20" y="308" width="353" height="60"/>
+                                <rect key="frame" x="20" y="273.66666666666669" width="353" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Xue-rz-8w4"/>
                                 </constraints>

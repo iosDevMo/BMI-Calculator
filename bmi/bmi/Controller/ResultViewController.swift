@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ResultViewController: UIViewController {
     
     
     @IBOutlet weak var bmiValueLabel: UILabel!
@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        
         
     }
     
