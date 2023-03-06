@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="p9I-iB-1Cy">
             <objects>
-                <viewController id="dmx-Pf-959" sceneMemberID="viewController">
+                <viewController id="dmx-Pf-959" customClass="SecondViewController" customModule="bmi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="es2-Vp-hZM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,9 @@
                                 <state key="normal" title="RECALCULATE">
                                     <color key="titleColor" red="0.36408464668579121" green="0.38376010741121103" blue="0.89052592844202905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="dmx-Pf-959" eventType="touchUpInside" id="Hzz-E5-Llb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whe-e7-AZQ">
                                 <rect key="frame" x="20" y="308" width="353" height="60"/>
@@ -198,6 +201,10 @@
                             <constraint firstItem="V78-DK-DPV" firstAttribute="centerY" secondItem="es2-Vp-hZM" secondAttribute="centerY" id="lcy-im-4z9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="VIO-Ux-PfF" id="Sx6-pO-0ai"/>
+                        <outlet property="bmiValueLabel" destination="V78-DK-DPV" id="bTC-eM-PN6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6O-mi-Amc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
