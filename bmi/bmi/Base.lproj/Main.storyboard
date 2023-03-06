@@ -31,6 +31,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27w-e3-EEy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE YOUR BMI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNF-uH-tp0">
                                 <rect key="frame" x="20" y="58.999999999999972" width="353" height="495.33333333333326"/>
@@ -41,7 +44,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="265" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-03-PpL">
                                 <rect key="frame" x="20" y="554.33333333333337" width="353" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-3D-iYN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-3D-iYN">
                                         <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -61,9 +64,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="265" translatesAutoresizingMaskIntoConstraints="NO" id="dmZ-6F-Mc5">
                                 <rect key="frame" x="20" y="657.33333333333337" width="353" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdF-2W-5yf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdF-2W-5yf">
                                         <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -83,12 +86,18 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3TG-cO-sVG"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="hightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6m2-be-MCM"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7V1-Pu-hul">
                                 <rect key="frame" x="18" y="705" width="357" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cCF-WF-jXf"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WaL-lK-233"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -115,6 +124,10 @@
                             <constraint firstItem="yMb-ly-wbM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zLk-op-Pp7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hightLabel" destination="2LZ-Nb-3Bc" id="JpW-vx-Vqs"/>
+                        <outlet property="weightLabel" destination="nH3-am-ThL" id="lCo-Xe-IZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
